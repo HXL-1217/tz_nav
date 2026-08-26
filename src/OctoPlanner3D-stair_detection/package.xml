@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>octo_planner3d</name>
+  <version>0.1.0</version>
+  <description>OctoMap based 3D global planner with RViz2 interface.</description>
+  <maintainer email="juchunyu@qq.com">Juchunyu</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>tf2_ros</depend>
+
+  <!-- 系统库依赖：让 rosdep 在 arm64 / amd64 上都能一键装齐。
+       octomap 由 ros-humble-octomap 提供（同时满足 find_package(OCTOMAP) 与运行时库）。 -->
+  <build_depend>octomap</build_depend>
+  <build_depend>pcl</build_depend>
+  <build_depend>vtk</build_depend>
+  <exec_depend>octomap</exec_depend>
+  <exec_depend>pcl</exec_depend>
+  <exec_depend>vtk</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,28 @@
+# === 大数据文件(超出 GitHub 单文件 100MB 限制,不入库)===
+*.pcd
+*.bt
+*.scenecache
+octomap/cache/
+octomap/pcd_files/
+
+# === colcon / catkin / CMake 构建产物 ===
+build/
+install/
+log/
+devel/
+cmake-build-*/
+
+# === 编译中间产物(注意:保留 lib/ 下预编译依赖 .so)===
+*.o
+*.a
+
+# === IDE / 编辑器 ===
+.vscode/
+.idea/
+.claude/
+.cache/
+compile_commands.json
+
+# === 系统 / 临时 ===
+*~
+.DS_Store
